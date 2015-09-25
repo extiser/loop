@@ -1,0 +1,57 @@
+#rt-showcase {
+    position: relative;
+
+    overflow: hidden;
+
+    width: 100%;
+}
+#iphone {
+    width: 1400px;
+    height: 732px;
+}
+#webpage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 1400px;
+    height: 732px;
+    margin: -466px 0 0 -700px;
+}
+#retina {
+    position: absolute;
+
+    display: none;
+
+    width: 240px;
+    height: 240px;
+
+    border: 2px solid white;
+    border-radius: 120px;
+    background: url("%=staticPrefixForCss=%general/loop.jpg") no-repeat center center #6e6969;
+    box-shadow: 0 0 5px #777, 0 0 10px #aaa inset;
+}
+
+.highlight {
+    box-shadow: 0 0 100px #aaa, 0 0 10px #aaa inset !important;
+}
+.highlight span {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 240px;
+    margin: 0 auto;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    font-weight: bold;
+}
+.blik {
+    position: relative;
+    top: 0;
+    left: 0;
+}
