@@ -1,26 +1,13 @@
 jQuery(document).ready(function($) {
-    
+// text warp
+    $('.rotate').lettering();
 /*Zoom Icon. Portfolio page*/
     $('a.touch').hover(function(){
         $(this).find('span.zoomIcon').stop(true, true).animate({opacity: 1, top: '50%'}, 200);
     },function(){
         $(this).find('span.zoomIcon').stop(true, true).animate({opacity: 0, top: '-50%'}, 100);
     })
-    $(function(){
-    // IPad/IPhone
-        var viewportmeta = document.querySelector && document.querySelector('meta[name="viewport"]'),
-        ua = navigator.userAgent,
 
-        gestureStart = function () {viewportmeta.content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6";},
-
-        scaleFix = function () {
-            if (viewportmeta && /iPhone|iPad/.test(ua) && !/Opera Mini/.test(ua)) {
-                viewportmeta.content = "width=device-width, minimum-scale=1.0, maximum-scale=1.0";
-                document.addEventListener("gesturestart", gestureStart, false);
-            }
-        };
-        scaleFix();
-    });
 //LOUPE!!!!
     /* This code is executed on the document ready event */
     var left    = 0,
@@ -31,11 +18,6 @@ jQuery(document).ready(function($) {
         offset  = { left: webpage.offset().left, top: webpage.offset().top },
         retina  = $('#retina');
 
-    if(navigator.userAgent.indexOf('Chrome')!=-1) {
-        /*  Applying a special chrome curosor,
-         as it fails to render completely blank curosrs. */
-        retina.addClass('chrome');
-    }
     webpage.mousemove(function(e){
         left = (e.pageX-offset.left);
         top = (e.pageY-offset.top);
@@ -67,74 +49,52 @@ jQuery(document).ready(function($) {
     $("#iphone").mousemove(function(event) {
         var x = ($('#retina').css('backgroundPositionX'));
         var y = ($('#retina').css('backgroundPositionY'));
-        //ie fix
-        if(!x || !y) {
-            x = ($('#retina').css('background-position-x'));
-            y = ($('#retina').css('background-position-y'));
-        }
-        //FF fix
-        // if ($.browser.mozilla) {
-        //     var backgroundPos = $('#retina').css('backgroundPosition').split(" ");
-        //     //now contains an array like ["0%", "50px"]
-        //     x = backgroundPos[0],
-        //     y = backgroundPos[1];
-        // }
-        x = Number(x.split("px")[0]);
-        y = Number(y.split("px")[0]);
+
+        // x = Number(x.split("px")[0]);
+        // y = Number(y.split("px")[0]);
+        x = x.split("px")[0];
+        y = y.split("px")[0];
         void 0;
-        if(x > -1050 && x < -900 && y > -750 && y < -600) {
+
+        if(x > -1050 && x < -900 && y > -750 && y < -450) {
             $("#retina").addClass("highlight");
             $("#iphone").click(function(e) {
                 window.location.href = "";
             });
-            $("#retina").children('span').html('Попа').css("top", "50%");;
-            // $("#retina").children('.blik').css( "top", "-22px" );
+            $("#retina").children('div.text').html('Коррекция ягодиц').addClass('ass').lettering();
         }
-        else if (x > -1500 && x < -1050 && y > -600 && y < -400) {
+        else if (x > -1300 && x < -1050 && y > -600 && y < -400) {
             $("#retina").addClass("highlight");
             $("#iphone").click(function(e) {
                 window.location.href = "";
             });
-            $("#retina").children('span').html('Плоский живот').css("top", "50%");;
-            // $("#retina").children('.blik').css( "top", "-22px" );
+            $("#retina").children('div.text').html('Коррекция области живота').addClass('stomach').lettering();
         }
-        else if (x > -800 && x < -200 && y > -600 && y < -300) {
+        else if (x > -800 && x < -500 && y > -600 && y < -300) {
             $("#retina").addClass("highlight");
             $("#iphone").click(function(e) {
                 window.location.href = "";
             });
-            $("#retina").children('span').html('Ноги').css("top", "50%");
-            // $("#retina").children('.blik').css( "top", "" );
+            $("#retina").children('div.text').html('Коррекция голеней').addClass('legs').lettering();
         } 
-        else if (x > -1400 && x < -1300 && y > -400 && y < -300) {
+        else if (x > -1400 && x < -1300 && y > -500 && y < -300) {
             $("#retina").addClass("highlight");
             $("#iphone").click(function(e) {
                 window.location.href = "";
             });
-            $("#retina").children('span').html('Идеальная грудь').css("top", "50%");;
-            // $("#retina").children('.blik').css( "top", "-27px" );
-        }
-        else if (x > -1600 && x < -1400 && y > -700 && y < -600) {
-            $("#retina").addClass("highlight");
-            $("#iphone").click(function(e) {
-                window.location.href = "";
-            });
-            $("#retina").children('span').html('Руки').css("top", "50%");;
-            // $("#retina").children('.blik').css( "top", "-27px" );
+            $("#retina").children('div.text').html('Мастерская идеальной груди').addClass('boobs').lettering();
         }
         else if (x > -1700 && x < -1500 && y > -300 && y < 0) {
             $("#retina").addClass("highlight");
             $("#iphone").click(function(e) {
                 window.location.href = "";
             });
-            $("#retina").children('span').html('Лицо').css("top", "50%");;
-            // $("#retina").children('.blik').css("top", "27px");
+            $("#retina").children('div.text').html('Пластика лица').addClass('face').lettering();
         }
-
         else {
             $("#retina").removeClass("highlight");
             $('#iphone').unbind('click');
-            $("#retina").children('span').html('');
+            $("#retina").children('div.text').html('');
             $("#retina").children('.blik').css( "top", "0px" );
         }
     });

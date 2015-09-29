@@ -17,6 +17,10 @@
     width: 1400px;
     height: 732px;
     margin: -366px 0 0 -700px;
+    img {
+        display: block;
+        margin: auto;
+    }
 }
 #retina {
     position: absolute;
@@ -28,27 +32,62 @@
 
     border: 2px solid white;
     border-radius: 120px;
-    background: url("%=staticPrefixForCss=%general/loop.jpg") no-repeat center center #6e6969;
+    background: url("%=staticPrefixForCss=%general/loop4.jpg") no-repeat center center #6e6969;
     box-shadow: 0 0 5px #777, 0 0 10px #aaa inset;
 }
 
 .highlight {
     box-shadow: 0 0 100px #aaa, 0 0 10px #aaa inset !important;
 }
-.highlight span {
+.highlight .text {
     position: absolute;
-    top: 0;
+    top: -40px;
     left: 0;
 
     display: block;
 
-    width: 240px;
+    width: 100%;
+    height: 100%;
     margin: 0 auto;
 
-    text-align: center;
-    text-transform: uppercase;
+    transform: rotate(-11deg);
 
-    font-weight: bold;
+    color: #767676;
+    &.face {
+        transform: rotate(-40deg);
+    }
+    &.ass {
+        transform: rotate(-22deg);
+    }
+    &.boobs {
+        transform: rotate(-60deg);
+    }
+    &.stomach {
+       transform: rotate(-58deg);
+    }
+    span {
+        position: absolute;
+        z-index: 100;
+        top: 10px;
+        left: 50%;
+
+        display: block;
+
+        width: 15px;
+        height: 105px;
+        margin-left: 10px;
+
+        transform-origin: bottom center;
+        text-align: center;
+        text-transform: uppercase;
+
+        font-size: em(11px);
+    }
+}
+@for $i from 1 through 100 {
+  .char#{$i} {
+    transform: rotate(($i*5)+deg);
+  }
 }
 .blik {
     position: relative;
