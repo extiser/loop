@@ -1,6 +1,5 @@
 jQuery(document).ready(function($) {
 // text warp
-    $('.rotate').lettering();
 /*Zoom Icon. Portfolio page*/
     $('a.touch').hover(function(){
         $(this).find('span.zoomIcon').stop(true, true).animate({opacity: 1, top: '50%'}, 200);
@@ -61,40 +60,40 @@ jQuery(document).ready(function($) {
             $("#iphone").click(function(e) {
                 window.location.href = "";
             });
-            $("#retina").children('div.text').html('Коррекция ягодиц').addClass('ass').lettering();
+            $("#retina").children('div.text').attr('id', 'ass');
         }
         else if (x > -1300 && x < -1050 && y > -600 && y < -400) {
             $("#retina").addClass("highlight");
             $("#iphone").click(function(e) {
                 window.location.href = "";
             });
-            $("#retina").children('div.text').html('Коррекция области живота').addClass('stomach').lettering();
+            $("#retina").children('div.text').attr('id', 'stomach');
         }
         else if (x > -800 && x < -500 && y > -600 && y < -300) {
             $("#retina").addClass("highlight");
             $("#iphone").click(function(e) {
                 window.location.href = "";
             });
-            $("#retina").children('div.text').html('Коррекция голеней').addClass('legs').lettering();
+            $("#retina").children('div.text').attr('id', 'legs');
         } 
         else if (x > -1400 && x < -1300 && y > -500 && y < -300) {
             $("#retina").addClass("highlight");
             $("#iphone").click(function(e) {
                 window.location.href = "";
             });
-            $("#retina").children('div.text').html('Мастерская идеальной груди').addClass('boobs').lettering();
+            $("#retina").children('div.text').attr('id', 'boobs');
         }
         else if (x > -1700 && x < -1500 && y > -300 && y < 0) {
             $("#retina").addClass("highlight");
             $("#iphone").click(function(e) {
                 window.location.href = "";
             });
-            $("#retina").children('div.text').html('Пластика лица').addClass('face').lettering();
+            $("#retina").children('div.text').attr('id', 'face');
         }
         else {
             $("#retina").removeClass("highlight");
             $('#iphone').unbind('click');
-            $("#retina").children('div.text').html('');
+            $("#retina").children('div.text').removeAttr('id');
             $("#retina").children('.blik').css( "top", "0px" );
         }
     });

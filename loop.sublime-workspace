@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"col",
+				"colspan	Attr"
+			],
+			[
 				"marign",
 				"margin-top"
 			],
@@ -510,10 +514,6 @@
 			[
 				"border-bott",
 				"border-bottom-color"
-			],
-			[
-				"sev",
-				"service-wedding-cake"
 			]
 		]
 	},
@@ -591,10 +591,17 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/extiser/git/loop/markup"
+		"/Users/extiser/git/loop/markup",
+		"/Users/extiser/git/loop/markup/modules",
+		"/Users/extiser/git/loop/markup/modules/loop",
+		"/Users/extiser/git/loop/markup/static"
 	],
 	"file_history":
 	[
+		"/Users/extiser/Work/svadba-mail.html",
+		"/Users/extiser/git/loop/markup/modules/loop/loop.jade",
+		"/Users/extiser/git/loop/markup/modules/loop/loop.scss",
+		"/Users/extiser/git/loop/markup/modules/loop/loop.js",
 		"/Users/extiser/git/insight-equity/markup/modules/business-profit/business-profit.jade",
 		"/Users/extiser/git/insight-equity/markup/modules/business-profit/business-profit.scss",
 		"/Users/extiser/git/insight-equity/markup/pages/ready-business.jade",
@@ -718,11 +725,7 @@
 		"/Users/extiser/git/gsb/markup/modules/header/header.scss",
 		"/Users/extiser/git/gsb/markup/modules/main-slider-bottom/main-slider-bottom.js",
 		"/Users/extiser/git/gsb/markup/pages/index.jade",
-		"/Users/extiser/git/gsb/markup/pages/objects.jade",
-		"/Users/extiser/git/gsb/markup/pages/object.jade",
-		"/Users/extiser/git/gsb/markup/modules/header/header.jade",
-		"/Users/extiser/git/gsb/markup/pages/about.jade",
-		"/Users/extiser/git/gsb/markup/pages/engineering-services.jade"
+		"/Users/extiser/git/gsb/markup/pages/objects.jade"
 	],
 	"find":
 	{
