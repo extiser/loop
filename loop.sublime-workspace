@@ -519,6 +519,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "markup/pages/index.jade",
+			"settings":
+			{
+				"buffer_size": 422,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -593,15 +601,18 @@
 	[
 		"/Users/extiser/git/loop/markup",
 		"/Users/extiser/git/loop/markup/modules",
+		"/Users/extiser/git/loop/markup/modules/header",
 		"/Users/extiser/git/loop/markup/modules/loop",
+		"/Users/extiser/git/loop/markup/modules/top-menu",
+		"/Users/extiser/git/loop/markup/pages",
 		"/Users/extiser/git/loop/markup/static"
 	],
 	"file_history":
 	[
+		"/Users/extiser/git/loop/markup/modules/loop/loop.js",
+		"/Users/extiser/git/loop/markup/modules/loop/loop.scss",
 		"/Users/extiser/Work/svadba-mail.html",
 		"/Users/extiser/git/loop/markup/modules/loop/loop.jade",
-		"/Users/extiser/git/loop/markup/modules/loop/loop.scss",
-		"/Users/extiser/git/loop/markup/modules/loop/loop.js",
 		"/Users/extiser/git/insight-equity/markup/modules/business-profit/business-profit.jade",
 		"/Users/extiser/git/insight-equity/markup/modules/business-profit/business-profit.scss",
 		"/Users/extiser/git/insight-equity/markup/pages/ready-business.jade",
@@ -1017,8 +1028,38 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "markup/pages/index.jade",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 422,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/Jade/Syntaxes/Jade.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
